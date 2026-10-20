@@ -1,11 +1,13 @@
-import { useState } from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Footer from './components/Footer'
 import './App.css'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import About from './pages/About'
+import Skills from './pages/Skills'
+import Projects from './pages/Projects'
+import Contact from './pages/Contact'
+
 
 const App = () => {
   const nombre = "Luciano Perondi"
@@ -13,14 +15,19 @@ const App = () => {
   const email = "lucianoperondi90@gmail.com"
 
   return (
-    <div className="container">    
-      <Header nombre={nombre} profesion={profesion}/>
-      <Hero/>
-      <About/>
-      <Skills/>
-      <Projects/>
-      <Footer nombre={nombre} email={email}/>      
-    </div>
+    <BrowserRouter>
+      <Header nombre={nombre} profesion={profesion} />
+      <main className="container">
+        <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/about" element={<About/>}/>
+            <Route path="/skills" element={<Skills/>}/>
+            <Route path="/projects" element={<Projects/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+        </Routes>
+      </main>
+      <Footer nombre={nombre} email={email} />
+    </BrowserRouter>
   )
 }
 
