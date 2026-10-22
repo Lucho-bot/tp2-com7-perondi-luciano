@@ -1,0 +1,11 @@
+.skill-card {
+  transition: background-color 0.3s;
+}
+
+.skill-js:hover { background-color: #f7df1e; }
+.skill-react:hover { background-color: #61dafb; }
+.skill-html:hover { background-color: #ffb38a; }
+.skill-css:hover { background-color: #a8c8ff; }
+.skill-csharp:hover { background-color: #d1b3ff; }
+.skill-aspnet:hover { background-color: #b2dfdb; }
+.skill-git:hover { background-color: #ffcc80; }
