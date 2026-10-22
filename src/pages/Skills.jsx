@@ -1,5 +1,5 @@
 import SkillCard from '../components/SkillCard'
-import './Skills.css'
+import '../styles/Skills.css'
 
 const Skills = () => {
   const habilidades = [

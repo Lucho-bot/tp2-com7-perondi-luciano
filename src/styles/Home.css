@@ -1,0 +1,8 @@
+.home-card {
+  border-left: 5px solid #0f766e;
+}
+
+.home-info { background-color: #58eecb; }
+.home-proyectos { background-color: #2bbe97; }
+.home-habilidades { background-color: #1ae8b1; }
+.home-contacto { background-color: #1ba885; }

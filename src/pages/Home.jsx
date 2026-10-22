@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import '../styles/Home.css'
 
 const Home = ({ nombre }) => {
 
@@ -6,18 +7,22 @@ const Home = ({ nombre }) => {
         {
             titulo: 'Información personal',
             descripcion: 'Quién soy, por qué elegí la programación, mi formación y hacia dónde quiero crecer como desarrollador.',
+            clase: 'home-info'
         },
         {
             titulo: 'Proyectos',
             descripcion: 'Los trabajos que desarrollé durante la carrera: un compilador, APIs REST, aplicaciones web y este mismo portfolio.',
+            clase: 'home-proyectos'
         },
         {
             titulo: 'Habilidades',
             descripcion: 'Los lenguajes, frameworks y herramientas con los que trabajo, del backend con C# al frontend con React.',
+            clase: 'home-habilidades'
         },
         {
             titulo: 'Contactame',
             descripcion: 'Mis medios de contacto: email, GitHub e Instagram. Escribime cuando quieras.',
+            clase: 'home-contacto'
         },
     ]
 
@@ -33,7 +38,7 @@ const Home = ({ nombre }) => {
             <div className="row g-3">
                 {secciones.map((seccion) => (
                     <div key={seccion.titulo} className="col-md-6">
-                        <div className="card h-100 border-0 shadow-sm home-card">
+                        <div className={'card h-100 border-0 shadow-sm home-card ' + seccion.clase}>
                             <div className="card-body">
                                 <h3 className="h5 card-title">{seccion.titulo}</h3>
                                 <p className="card-text mb-0">{seccion.descripcion}</p>
