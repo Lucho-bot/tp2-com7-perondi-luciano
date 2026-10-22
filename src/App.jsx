@@ -14,6 +14,7 @@ const App = () => {
   const nombre = "Luciano Perondi"
   const profesion = "Estudiante de programacion"
   const email = "lucianoperondi90@gmail.com"
+  const github = 'lucho-bot'
   const instagram = "lucianoperondi"
 
   return (
@@ -30,7 +31,7 @@ const App = () => {
               <Route path="/about" element={<About/>}/>
               <Route path="/skills" element={<Skills/>}/>
               <Route path="/projects" element={<Projects/>}/>
-              <Route path="/contact" element={<Contact/>}/>
+              <Route path="/contact" element={<Contact email={email} github={github} instagram={instagram}/>}/>
             </Routes>
           </main>
         </div>
