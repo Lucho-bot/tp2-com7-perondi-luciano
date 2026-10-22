@@ -33,7 +33,7 @@ const Home = ({ nombre }) => {
                 Estudiante de la Tecnicatura Universitaria en Programación (UTN FRT),
                 en camino a convertirme en desarrollador Full Stack.
             </p>
-            <p>
+            <p className="fs-5">
                 Mi perfil es principalmente backend: desarrollo APIs REST y aplicaciones
                 web con C# y .NET, y hoy estoy sumando React al frontend. Prefiero código
                 simple que pueda explicar de punta a punta.
