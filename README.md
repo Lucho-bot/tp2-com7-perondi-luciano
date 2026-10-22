@@ -1,16 +1,57 @@
-# React + Vite
+# Portfolio multipágina con React Router — TP2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Alumno:** Luciano Perondi
+**Comisión:** 7
+**Materia:** Programación IV — Tecnicatura Universitaria en Programación, UTN FRT
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Portfolio personal convertido en una aplicación multipágina. Amplía el TP1: cada sección pasó a ser una página propia, con un menú lateral que permanece visible mientras el contenido de la derecha cambia según la ruta, sin recargar el sitio.
 
-## React Compiler
+| Página | Ruta |
+|---|---|
+| Inicio | `/` |
+| Información personal | `/about` |
+| Habilidades | `/skills` |
+| Proyectos | `/projects` |
+| Contacto | `/contact` |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías
 
-## Expanding the ESLint configuration
+- React + Vite
+- JavaScript y JSX
+- React Router DOM
+- Bootstrap (solo CSS) y CSS propio
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Estructura
+
+```
+src/
+├── assets/       → foto de perfil
+├── components/   → Header, Footer, Sidebar, ProjectCard, SkillCard
+├── pages/        → Home, About, Skills, Projects, Contact
+├── styles/       → todos los archivos CSS
+├── App.jsx       → rutas y layout (menú lateral + contenido)
+└── main.jsx
+```
+
+## Instalación y ejecución
+
+1. Clonar el repositorio:
+```
+   git clone https://github.com/lucho-bot/tp2-com7-perondi-luciano.git
+```
+2. Entrar a la carpeta e instalar las dependencias:
+```
+   cd tp2-com7-perondi-luciano
+   npm install
+```
+3. Ejecutar la aplicación:
+```
+   npm run dev
+```
+4. Abrir en el navegador la dirección que muestra la terminal (por defecto, `http://localhost:5173`).
+
+## Repositorio
+
+https://github.com/lucho-bot/tp2-com7-perondi-luciano

@@ -2,10 +2,10 @@
 
 const Contact = ({ email, github, instagram }) => {
 
-    
+
   return (
     <section>
-      <h2 className="mb-3">Contacto</h2>
+      <h2 className="mb-3">Contactame</h2>
       <p className="mb-4">
         ¿Tenés un proyecto en mente, una consulta o ganas de charlar de
         programación (o de cine)? Escribime por cualquiera de estos medios.
