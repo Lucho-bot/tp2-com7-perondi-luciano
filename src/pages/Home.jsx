@@ -1,6 +1,25 @@
 import { Link } from 'react-router-dom'
 
-const Home = ({nombre}) => {
+const Home = ({ nombre }) => {
+
+    const secciones = [
+        {
+            titulo: 'Información personal',
+            descripcion: 'Quién soy, por qué elegí la programación, mi formación y hacia dónde quiero crecer como desarrollador.',
+        },
+        {
+            titulo: 'Proyectos',
+            descripcion: 'Los trabajos que desarrollé durante la carrera: un compilador, APIs REST, aplicaciones web y este mismo portfolio.',
+        },
+        {
+            titulo: 'Habilidades',
+            descripcion: 'Los lenguajes, frameworks y herramientas con los que trabajo, del backend con C# al frontend con React.',
+        },
+        {
+            titulo: 'Contactame',
+            descripcion: 'Mis medios de contacto: email, GitHub e Instagram. Escribime cuando quieras.',
+        },
+    ]
 
     return (
         <section>
@@ -10,22 +29,21 @@ const Home = ({nombre}) => {
                 en camino a convertirme en desarrollador Full Stack.
             </p>
 
-            <h2 className="h4 mt-4">Perfil profesional</h2>
-            <p>
-                Desarrollo backend con C# y .NET: APIs REST, aplicaciones web con Blazor
-                y persistencia con Entity Framework Core. Hoy estoy sumando React al
-                frontend. Prefiero código simple que pueda explicar de punta a punta.
-            </p>
+            <h2 className="h4 mt-5 mb-3">Qué vas a encontrar acá</h2>
+            <div className="row g-3">
+                {secciones.map((seccion) => (
+                    <div key={seccion.titulo} className="col-md-6">
+                        <div className="card h-100 border-0 shadow-sm home-card">
+                            <div className="card-body">
+                                <h3 className="h5 card-title">{seccion.titulo}</h3>
+                                <p className="card-text mb-0">{seccion.descripcion}</p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
 
-            <h2 className="h4 mt-4">Qué vas a encontrar acá</h2>
-            <ul>
-                <li><strong>Sobre mí:</strong> quién soy, mi formación y mis objetivos.</li>
-                <li><strong>Habilidades:</strong> las tecnologías y herramientas que uso.</li>
-                <li><strong>Proyectos:</strong> trabajos que desarrollé, con enlace a sus repositorios.</li>
-                <li><strong>Contacto:</strong> cómo comunicarte conmigo.</li>
-            </ul>
-
-            <Link to="/projects" className="btn btn-primary mt-3">Ver mis proyectos</Link>
+            <Link to="/projects" className="btn btn-oceano mt-4">Ver mis proyectos</Link>
         </section>
     )
 }

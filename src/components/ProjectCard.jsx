@@ -15,7 +15,7 @@ const ProjectCard = ({ titulo, descripcion, tecnologias, repo }) => {
                             href={repo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn btn-outline-primary btn-sm mt-2"
+                            className="btn btn-oceano btn-sm mt-2"
                         >
                             Ver repositorio
                         </a>

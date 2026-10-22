@@ -31,7 +31,7 @@ const About = () => {
                 </div>
             )}
 
-            <button className="btn btn-outline-primary mt-2" onClick={() => setVerMas(!verMas)}>
+            <button className="btn btn-oceano" onClick={() => setVerMas(!verMas)}>
                 {verMas ? 'Ver menos' : 'Ver más'}
             </button>
         </section>
