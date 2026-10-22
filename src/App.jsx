@@ -14,6 +14,7 @@ const App = () => {
   const nombre = "Luciano Perondi"
   const profesion = "Estudiante de programacion"
   const email = "lucianoperondi90@gmail.com"
+  const instagram = "lucianoperondi"
 
   return (
     <BrowserRouter>
@@ -34,7 +35,7 @@ const App = () => {
           </main>
         </div>
       </div>
-      <Footer nombre={nombre} email={email} />
+      <Footer nombre={nombre} email={email} instagram={instagram} />
     </BrowserRouter>
   )
 }
