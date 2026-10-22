@@ -1,5 +1,5 @@
 
-const ProjectCard = ({ titulo, descripcion, tecnologias }) => {
+const ProjectCard = ({ titulo, descripcion, tecnologias, repo }) => {
 
     return (
         <div className="col-md-6">
@@ -10,6 +10,16 @@ const ProjectCard = ({ titulo, descripcion, tecnologias }) => {
                     <p className="card-text">
                         <small className="text-muted">Tecnologías: {tecnologias}</small>
                     </p>
+                    {repo && (
+                        <a
+                            href={repo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-outline-primary btn-sm mt-2"
+                        >
+                            Ver repositorio
+                        </a>
+                    )}
                 </div>
             </article>
         </div>
